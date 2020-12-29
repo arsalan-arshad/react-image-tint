@@ -7,6 +7,7 @@ interface ReactImageTintProps {
   color: string;
   alt?: string;
   cache?: boolean;
+  style?: object;
 };
 
 interface ReactImageTintState {
@@ -56,6 +57,7 @@ export class ReactImageTint extends React.Component<ReactImageTintProps, ReactIm
         alt={this.props.alt}
         ref="img"
         crossOrigin="anonymous"
+        style={this.props.style}
       />
     );
   }
